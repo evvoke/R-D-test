@@ -1,0 +1,89 @@
+<title>Test</title>
+
+</head>
+
+<body>
+    <!-- Navigation Start -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            Jasdeep Sandhu
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Task 1
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/task2">Task 2
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/task3">Task 3
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/task4">Task 4
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/task5">Task 5
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/task6">Task 6
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Navigation End -->
+    <!-- Formatting Start -->
+    <br>
+    <!-- Formatting End -->
+    <!-- Data Table Start -->
+    <p>
+        <center>Total number of times item (item_id = 47) was purchased</center>
+        <br>
+        <center>Total: <i>{{task}}</i></center>
+    </p>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">item_id</th>
+                <th scope="col">item_category</th>
+                <th scope="col">cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+                {{#each usage_statistics.session_infos}}
+                    {{#each purchases}}
+                        {{#equal item_id 47}}
+                            <tr>
+                                <th scope="row">{{item_id}}</th>
+                                <td>{{item_category_id}}</td>
+                                <td>{{cost}}</td>
+                            </tr>
+                        {{/equal}}
+                    {{/each}}
+                {{/each}}
+            {{/each}}
+        </tbody>
+    </table>
+    <!-- Data Table End -->
+    <!-- Formatting Start -->
+    <br>
+    <!-- Formatting End -->
